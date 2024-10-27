@@ -18,10 +18,10 @@ backBtn.addEventListener("click", () => {
     image3.style.display = "flex"
 })
 
-webBtn.addEventListener("click", () => {
-    image1.style.display = "none"
-    image2.style.display = "flex"
-    image3.style.display = "none"
-})
+// webBtn.addEventListener("click", () => {
+//     image1.style.display = "none"
+//     image2.style.display = "flex"
+//     image3.style.display = "none"
+// })
 
 

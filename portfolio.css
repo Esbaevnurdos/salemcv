@@ -194,7 +194,7 @@ html {
     justify-content: space-between;
     padding-left: 150px;
     padding-right: 200px;
-    display: none;
+    display: flex;
 }
 
 .img1 {
