@@ -31,13 +31,18 @@ html {
     position: relative;
      overflow: hidden;
     align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
 }
 
 
 .about .left-top img {
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    height: 90%;
     object-fit: cover;
+    border-radius: 180px;
 }
 
 
@@ -136,7 +141,7 @@ html {
 .right-top3 {
     height: 400px;
     width: 550px;
-    background-color: black;
+    /* background-color: black; */
     margin-left: 100px;
     margin-top: 25px;
     display: flex;
@@ -218,6 +223,40 @@ html {
     font-family: mySecondFont;
 }
 
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 40px; /* Space between grid items */
+    background-color: #000; /* Black background */
+    padding: 20px;
+    color: #f8c102; /* Yellow text color */
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.stat-item h2 {
+    font-size: 4rem; /* Large font for the numbers */
+    margin: 0;
+    font-family: mySecondFont;
+}
+
+.stat-item p {
+    font-size: 1rem; /* Smaller font for the labels */
+    color: white;
+    margin: 5px 0 0;
+    font-family: mySecondFont;
+}
+
 
   @font-face {
     font-family: myFirstFont;
@@ -234,6 +273,7 @@ html {
  .black-container {
     /* display: flex;
     flex-direction: column; */
+    gap: 50px;
  }   
 
  .left {
@@ -294,7 +334,7 @@ html {
 .right-top3 {
     height: 400px;
     width: 100%;
-    background-color: black;
+    /* background-color: black; */
     margin-left: 50px;
     margin-top: 25px;
     display: flex;
@@ -446,7 +486,7 @@ html {
 .right-top3 {
     height: 400px;
     width: 100%;
-    background-color: black;
+    /* background-color: black; */
     margin-left: 50px;
     margin-top: 25px;
     display: flex;
@@ -747,4 +787,13 @@ html {
     padding-right: 0px;
     padding-top: 10px;
 }
+}
+
+
+@media (max-width: 400px) {
+    .stats-grid {
+        grid-template-columns: 1fr; /* 1 column layout for smaller screens */
+        gap: 20px; /* Optional: Reduce the gap for smaller screens */
+        padding: 10px; /* Optional: Adjust padding for smaller screens */
+    }
 }

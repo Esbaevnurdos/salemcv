@@ -1,27 +1,32 @@
-const webBtn = document.getElementById("web")
-const backBtn = document.getElementById("back")
-const designBtn = document.getElementById("design")
+const webProjectsBtn = document.getElementById("webProjectsBtn");
+const graphicDesignBtn = document.getElementById("graphicDesignBtn");
 
-const image1 = document.querySelector(".image1")
-const image2 = document.querySelector(".image2")
-const image3 = document.querySelector(".image3")
+const webProjectsSection = document.querySelector(".image1");
+const graphicDesignSection = document.querySelector(".image2");
 
-designBtn.addEventListener("click", () => {
-    image1.style.display = "flex"
-    image2.style.display = "none"
-    image3.style.display = "none"
-})
+function showSection(sectionToShow, sectionToHide) {
+    sectionToHide.classList.remove("show"); // Remove show effect
+    sectionToHide.classList.add("hidden");  // Hide completely
+    
+    sectionToShow.classList.remove("hidden"); // Unhide for animation
+    setTimeout(() => {
+        sectionToShow.classList.add("show"); // Apply show effect with animation
+    }, 50); // Slight delay for smooth animation
+}
 
-backBtn.addEventListener("click", () => {
-    image1.style.display = "none"
-    image2.style.display = "none"
-    image3.style.display = "flex"
-})
+// Event listeners for buttons
+webProjectsBtn.addEventListener("click", () => {
+    if (!webProjectsBtn.classList.contains("active")) {
+        webProjectsBtn.classList.add("active");
+        graphicDesignBtn.classList.remove("active");
+        showSection(webProjectsSection, graphicDesignSection);
+    }
+});
 
-// webBtn.addEventListener("click", () => {
-//     image1.style.display = "none"
-//     image2.style.display = "flex"
-//     image3.style.display = "none"
-// })
-
-
+graphicDesignBtn.addEventListener("click", () => {
+    if (!graphicDesignBtn.classList.contains("active")) {
+        graphicDesignBtn.classList.add("active");
+        webProjectsBtn.classList.remove("active");
+        showSection(graphicDesignSection, webProjectsSection);
+    }
+});

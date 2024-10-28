@@ -70,14 +70,22 @@ body{
 }
 
 .main-right .main-img {
-    height: 725px;
+   height: 100vh; /* Fills the viewport height */
+    width: auto; /* Maintains aspect ratio */
+    object-fit: cover;
+    background-color: black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-right .main-img img{
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     object-fit: cover;
-    object-position: center;
+    border-radius: 180px;
+    
+
 }
 
 .navbar {

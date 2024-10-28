@@ -2,11 +2,18 @@ const body = document.body
 const dark = document.getElementById("dark")
 const light = document.getElementById("light")
 
-dark.addEventListener("click", () => {
-    body.style.color = "white"
-    body.style.background = "black"
-})
+// dark.addEventListener("click", () => {
+//     body.style.color = "white"
+//     body.style.background = "black"
+// })
 
+
+function downloadCV() {
+    const link = document.createElement('a');
+    link.href = 'nur_cv.pdf';
+    link.download = 'nur_cv.pdf';
+    link.click();
+}
 
 
 // light.addEventListener("click", () => {
