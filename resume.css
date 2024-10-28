@@ -21,7 +21,8 @@ html {
 
 .about .left {
     width: 20%;
-    max-height: 500px;
+    height: 100vh;
+    /* height: 100%; */
     /* display: block; */
 }
 
@@ -37,6 +38,12 @@ html {
     background-color: black;
 }
 
+.about .left-bottom {
+    width: 300px;
+    height:90%;
+    background-color: #F4B400;
+}
+
 
 .about .left-top img {
     width: 60%;
@@ -45,12 +52,14 @@ html {
     border-radius: 180px;
 }
 
-
-.about .left-bottom {
-    width: 300px;
-    height: 530px;
-    background-color: #F4B400;
+.left-bottom a {
+    text-decoration: none;
+    color: black;
+    font-family: mySecondFont;
+    font-size: 20px;
+    margin-top: 50px;
 }
+
 
 
 
@@ -58,15 +67,10 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
-}
-
-.left-bottom a {
-    text-decoration: none;
-    color: black;
-    font-family: mySecondFont;
-    font-size: 20px;
+    justify-content: start;
+    /* gap: 40px; */
+    /* margin-top: ; */
+    /* height: 100%; */
 }
 
 .right {
@@ -121,6 +125,7 @@ html {
     align-items: center;
     padding: 10px;
     margin-right: 30px;
+    display: none;
 }
 
 .navbar i {
@@ -219,6 +224,9 @@ html {
     .skill-item p {
         font-size: 12px;
     }
+     .navbar {
+   display: flex;
+}
 }
 
 @media (max-width: 480px) {
@@ -352,6 +360,9 @@ html {
     border: 2px solid black;
     /* width: 1000px; */
     margin: 0;
+}
+ .navbar {
+   display: flex;
 }
 }
 
